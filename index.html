@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/7e95a48abd.js"
       crossorigin="anonymous"
@@ -28,23 +34,29 @@
               <h3 class="intro__heading">
                 All your files in one secure location, accessible anywhere.
               </h3>
-              <p class="intro__paragraph">
+              <p class="intro__paragraph intro__paragraph--bold">
                 Fylo stores your most important files in one secure location.
                 Access them wherever you need, share and collaborate with
                 friends, family, and co-workers.
               </p>
               <form class="intro__form">
-                <div class="intro__email-input-container">
-                  <input type="email" class="intro__email-input" />
-                  <p class="intro__error-msg">
-                    Please enter a valid email address
-                  </p>
+                <div class="intro__form-container">
+                  <div class="intro__email-input-container">
+                    <input
+                      type="email"
+                      class="intro__email-input"
+                      placeholder="Enter your email..."
+                    />
+                    <p class="intro__error-msg intro__error-msg--hidden">
+                      Please enter a valid email address
+                    </p>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Get Started"
+                    class="intro__submit-input"
+                  />
                 </div>
-                <input
-                  type="submit"
-                  value="Get Started"
-                  class="intro__submit-input"
-                />
               </form>
             </div>
             <div class="intro__img-container">
