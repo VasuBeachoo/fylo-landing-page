@@ -1,0 +1,89 @@
+// VARIABLES //////////////////////////
+
+///////////////////////////////////////
+// MIXINS /////////////////////////////
+
+@mixin flex($direction: row, $justify: flex-start, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+///////////////////////////////////////
+// FUNCTIONS //////////////////////////
+
+///////////////////////////////////////
+// STYLES /////////////////////////////
+
+body {
+  margin: 0;
+}
+
+.intro {
+  @include flex(column, flex-start, center);
+
+  &__header-container {
+    @include flex(row, flex-start, flex-start);
+  }
+
+  &__img-text-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  &__img-container {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.testimonial {
+  @include flex(column, flex-start, center);
+
+  &__img-text-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, center);
+  }
+
+  &__testimonial-container {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  &__author-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__author-info {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.cta {
+  @include flex(row, flex-start, center);
+
+  &__text-container {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  &__form-container {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.footer {
+  @include flex(column, flex-start, flex-start);
+
+  &__columns-container {
+    @include flex(row, flex-start, flex-start);
+  }
+
+  &__column {
+    @include flex(column, flex-start, flex-start);
+  }
+}
