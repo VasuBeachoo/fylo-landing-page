@@ -199,6 +199,11 @@ body {
   padding: 10px;
 }
 
+.intro__email-input--invalid {
+  border: 1.5px solid #ff0000;
+  outline: 1px solid #ff0000;
+}
+
 .intro__error-msg {
   color: #ff0000;
   font-family: "Open Sans", sans-serif;
@@ -542,6 +547,11 @@ body {
   border: 1px solid #070439;
   border-radius: 2px;
   padding: 10px;
+}
+
+.cta__email-input--invalid {
+  border: 1.5px solid #ff0000;
+  outline: 1px solid #ff0000;
 }
 
 .cta__error-msg {

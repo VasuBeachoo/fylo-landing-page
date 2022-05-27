@@ -54,6 +54,11 @@ $body-font: "Open Sans", sans-serif;
   border: 1px solid color(Very-dark-blue);
   border-radius: 2px;
   padding: 10px;
+
+  &--invalid {
+    border: 1.5px solid color(Red);
+    outline: 1px solid color(Red);
+  }
 }
 
 @mixin error-msg() {

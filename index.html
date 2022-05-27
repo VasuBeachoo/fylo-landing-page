@@ -39,15 +39,19 @@
                 Access them wherever you need, share and collaborate with
                 friends, family, and co-workers.
               </p>
-              <form class="intro__form">
+              <form id="intro-form" class="intro__form" novalidate>
                 <div class="intro__form-container">
                   <div class="intro__email-input-container">
                     <input
                       type="email"
+                      id="intro-email-input"
                       class="intro__email-input"
                       placeholder="Enter your email..."
                     />
-                    <p class="intro__error-msg intro__error-msg--hidden">
+                    <p
+                      id="id-error-msg"
+                      class="intro__error-msg intro__error-msg--hidden"
+                    >
                       Please enter a valid email address
                     </p>
                   </div>
@@ -137,14 +141,18 @@
               would be happy to help you.
             </p>
           </div>
-          <form class="cta__form">
+          <form id="cta-form" class="cta__form" novalidate>
             <div class="cta__form-container">
               <input
                 type="email"
+                id="cta-email-input"
                 class="cta__email-input"
                 placeholder="Enter your email..."
               />
-              <p class="cta__error-msg cta__error-msg--hidden">
+              <p
+                id="cta-error-msg"
+                class="cta__error-msg cta__error-msg--hidden"
+              >
                 Please enter a valid email address
               </p>
               <input
@@ -200,5 +208,6 @@
         </footer>
       </div>
     </main>
+    <script src="./js/script.js"></script>
   </body>
 </html>
