@@ -219,7 +219,7 @@ body {
   background-color: #3065f8;
   color: #f6f6fe;
   width: 170px;
-  height: 39px;
+  height: 38.5px;
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-size: 12.5px;
@@ -235,7 +235,7 @@ body {
 
 .intro__submit-input:hover {
   cursor: pointer;
-  opacity: 0.8;
+  background-color: #7096ff;
 }
 
 .intro__img-container {
@@ -473,6 +473,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #585989;
+  width: 100%;
 }
 
 .cta__text-container {
@@ -489,6 +491,34 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 70px;
+}
+
+.cta__heading {
+  color: colors(Very-dark-blue);
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.cta__paragraph {
+  color: #070439;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  max-width: 520px;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 85%;
+}
+
+.cta__paragraph--bold {
+  font-weight: 700;
 }
 
 .cta__form-container {
@@ -505,6 +535,53 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.cta__email-input {
+  width: 300px;
+  border: 1px solid #070439;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.cta__error-msg {
+  color: #ff0000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  opacity: 0.85;
+  margin: 7px 0 0;
+  color: #ffffff;
+}
+
+.cta__error-msg--visible {
+  display: block;
+}
+
+.cta__error-msg--hidden {
+  display: none;
+}
+
+.cta__submit-input {
+  background-color: #3065f8;
+  color: #f6f6fe;
+  width: 170px;
+  height: 38.5px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+.cta__submit-input:hover {
+  cursor: pointer;
+  background-color: #7096ff;
 }
 
 .footer {

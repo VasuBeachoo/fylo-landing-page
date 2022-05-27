@@ -48,25 +48,11 @@ $body-font: "Open Sans", sans-serif;
   }
 }
 
-@mixin btn() {
-  background-color: color(Bright-blue);
-  color: color(Light-grayish-blue);
-  width: 170px;
-  height: 39px;
-  text-align: center;
-  font-family: $heading-font;
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border: none;
+@mixin email-input() {
+  width: 300px;
+  border: 1px solid color(Very-dark-blue);
   border-radius: 2px;
-  padding: 10px 0;
-  transition: 0.2s;
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+  padding: 10px;
 }
 
 @mixin error-msg() {
@@ -82,6 +68,27 @@ $body-font: "Open Sans", sans-serif;
 
   &--hidden {
     display: none;
+  }
+}
+
+@mixin btn() {
+  background-color: color(Bright-blue);
+  color: color(Light-grayish-blue);
+  width: 170px;
+  height: 38.5px;
+  text-align: center;
+  font-family: $heading-font;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 0;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: hsl(224, 100%, 72%);
   }
 }
 
@@ -165,10 +172,7 @@ body {
   }
 
   &__email-input {
-    width: 300px;
-    border: 1px solid color(Very-dark-blue);
-    border-radius: 2px;
-    padding: 10px;
+    @include email-input();
   }
 
   &__error-msg {
@@ -281,13 +285,41 @@ body {
 
 .cta {
   @include flex(row, flex-start, center);
+  background-color: color(Desaturated-blue);
+  width: 100%;
 
   &__text-container {
     @include flex(column, flex-start, flex-start);
+    padding: 70px;
+  }
+
+  &__heading {
+    @include heading(28px);
+    color: color(White);
+  }
+
+  &__paragraph {
+    @include paragraph(13px);
+    color: color(White);
+    width: 85%;
   }
 
   &__form-container {
     @include flex(column, flex-start, flex-start);
+  }
+
+  &__email-input {
+    @include email-input();
+  }
+
+  &__error-msg {
+    @include error-msg();
+    color: color(White);
+  }
+
+  &__submit-input {
+    @include btn();
+    margin-top: 20px;
   }
 }
 
