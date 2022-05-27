@@ -9,6 +9,7 @@ $colors: (
   Light-gray: hsl(0, 0%, 75%),
   Red: #ff0000,
   White: #ffffff,
+  Light-purple: hsl(239, 39%, 73%),
 );
 
 $heading-font: "Raleway", sans-serif;
@@ -325,6 +326,9 @@ body {
 
 .footer {
   @include flex(column, flex-start, flex-start);
+  background-color: color(Very-dark-blue);
+  color: color(White);
+  width: 100%;
 
   &__columns-container {
     @include flex(row, flex-start, flex-start);
@@ -332,5 +336,54 @@ body {
 
   &__column {
     @include flex(column, flex-start, flex-start);
+    margin: 100px 90px 50px 90px;
+  }
+
+  &__logo {
+    width: 120px;
+    filter: brightness(0) invert(1);
+    transform: translate(100px, 75px);
+  }
+
+  &__icon-text-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__text {
+    color: color(Light-grayish-blue);
+    font-size: 15px;
+    font-family: $body-font;
+    margin: 10px 0;
+
+    &--link {
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: color(Light-purple);
+      }
+    }
+  }
+
+  &__social-media-icons {
+    @include flex(row, flex-start, center);
+  }
+
+  &__social-media-icon {
+    border: 1.5px solid color(Light-grayish-blue);
+    border-radius: 100%;
+    padding: 8px 11px;
+    margin: 0 20px 0 0;
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      color: color(Light-purple);
+      border-color: color(Light-purple);
+    }
   }
 }
