@@ -651,8 +651,8 @@ body {
   width: 120px;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
-  -webkit-transform: translate(100px, 75px);
-          transform: translate(100px, 75px);
+  -webkit-transform: translate(88px, 75px);
+          transform: translate(88px, 75px);
 }
 
 .footer__icon-text-container {
