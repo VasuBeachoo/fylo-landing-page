@@ -15,6 +15,8 @@ $colors: (
 $heading-font: "Raleway", sans-serif;
 $body-font: "Open Sans", sans-serif;
 
+$mobile-width: 1150px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 
@@ -98,6 +100,12 @@ $body-font: "Open Sans", sans-serif;
   }
 }
 
+@mixin mobile() {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
 ///////////////////////////////////////
 // FUNCTIONS //////////////////////////
 
@@ -119,6 +127,7 @@ body {
 
 .page {
   @include flex(column, flex-start, center);
+  width: 100%;
 }
 
 .intro {
@@ -390,5 +399,127 @@ body {
       color: color(Light-purple);
       border-color: color(Light-purple);
     }
+  }
+}
+
+@include mobile() {
+  .intro {
+    text-align: center;
+
+    &__logo {
+      width: 100px;
+    }
+
+    &__link {
+      font-size: 13px;
+      margin: 0 10px;
+    }
+
+    &__img-text-container {
+      @include flex(column-reverse, flex-start, center);
+    }
+
+    &__img {
+      width: 300px;
+      margin: 20px 0 50px 0;
+    }
+
+    &__text-container {
+      align-items: center;
+    }
+
+    &__heading {
+      max-width: 550px;
+    }
+
+    &__paragraph {
+      max-width: 510px;
+    }
+
+    &__form-container {
+      @include flex(column, flex-start, center);
+    }
+
+    &__email-input-container {
+      align-items: center;
+    }
+
+    &__submit-input {
+      font-size: 14px;
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .testimonial {
+    &__img-text-container {
+      @include flex(column-reverse, flex-start, center);
+    }
+
+    &__img {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+
+    &__text-container {
+      align-items: center;
+      margin-right: 0;
+    }
+
+    &__heading {
+      max-width: 450px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__paragraph {
+      max-width: 350px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .cta {
+    @include flex(column, flex-start, center);
+    text-align: center;
+
+    &__text-container {
+      align-items: center;
+      padding-bottom: 30px;
+    }
+
+    &__form-container {
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    &__submit-input {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    @include flex(column, flex-start, flex-start);
+    padding: 60px 0 30px;
+
+    &__logo {
+      transform: none;
+      width: 140px;
+      margin: 0 0 30px 50px;
+    }
+
+    &__columns-container {
+      @include flex(column, flex-start, flex-start);
+      width: 100%;
+    }
+
+    &__column {
+      margin: 0 0 20px 50px;
+    }
+  }
+
+  #footer-column-4 {
+    align-self: center;
+    margin-left: 0;
   }
 }
