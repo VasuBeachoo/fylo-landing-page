@@ -32,3 +32,4 @@ Users should be able to:
 - Semantic HTML5 markup
 - SCSS (using BEM methodology)
 - Flexbox
+- JavaScript
